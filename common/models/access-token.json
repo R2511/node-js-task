@@ -1,0 +1,32 @@
+{
+  "name": "accessToken",
+  "plural": "accessTokens",
+  "base": "AccessToken",
+  "properties": {
+
+    
+    "ttl": {
+      "type": "number",
+      "ttl": true,
+      "default": 1209600,
+      "description": "time to live in seconds (2 weeks by default)"
+    },
+
+    "created": {
+      "type": "Date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+     "type": "belongsTo",
+     "model": "users",
+     "foreignKey": "userId"
+   }
+  },
+  "acls": [
+    {}
+  ],
+  "methods": {}
+}

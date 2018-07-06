@@ -1,0 +1,27 @@
+{
+  "name": "student_marks",
+  "plural": "student_marks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "student_id": {
+      "type": "number",
+      "required": true
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "marks": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

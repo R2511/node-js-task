@@ -1,0 +1,23 @@
+{
+  "name": "student_details",
+  "plural": "student_details",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "roll_no": {
+      "type": "number",
+      "required": true
+    },
+    "Department": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
