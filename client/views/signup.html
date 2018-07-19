@@ -1,0 +1,58 @@
+
+<body>
+<center><h3>Signup</h3></center>
+
+
+<div ng-app="app" ng-controller="signupController">
+<div align="center" class="container">
+  <form name ="form" ng-submit="signup(data)" novalidate>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="Email">Email</label>
+      </div>
+      <div class="col-75">
+        <div class="form-group" ng-class="{ 'has-error' : data.email.$invalid && !data.email.$pristine }">
+        <center><input type="email" id="email" ng-model="data.email" name='uemail' required></center>
+          <span ng-show="default && form.uemail.$error.email"><br>invalid email.</br></span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="username">Username</label>
+      </div>
+      <div class="col-75">
+        <div class="form-group" ng-class="{ 'has-error' : data.username.$invalid && !data.username.$pristine }">
+     <input type="name" ng-model="data.Username" name='uname' required /><br />
+     <span ng-show="default && form.uname.$error.required">username is required.</span>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="password">password</label>
+      </div>
+      <div class="col-75">
+        <div class="form-group" ng-class="{ 'has-error' : data.password.$invalid && !data.password.$pristine }">
+          <input type="password" ng-model="data.password" name='upassword' required /><br />
+          <span ng-show="default && form.upassword.$error.required">password is required.</span>
+         </div>
+      </div>
+    </div>
+ <div class="row">
+      <div class="col-25">
+        <label for="Role">Role</label>
+      </div>
+      <div class="col-75">
+        <input type="name" name="uRole" ng-model="data.Role">
+      </div>
+    </div>
+    <div class="row">
+<input ng-click="submitted()" ng-disabled="default && form.$invalid"  type="submit" value="signup " />
+</div>
+</form>
+</div>
+
+</body>
+</html>
